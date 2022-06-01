@@ -41,6 +41,8 @@ jobs:
 
       - name: Setup python
         uses: actions/setup-python@v3
+
+      - name: Install precommit and run
         run: |
           pip install pre-commit
           pre-commit install
