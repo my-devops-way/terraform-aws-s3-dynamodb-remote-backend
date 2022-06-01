@@ -31,10 +31,12 @@ jobs:
       - name: Checkout Action
         uses: actions/checkout@v3
 
-      - name: Install go and tfsec
+      - name: Install go
         uses: actions/setup-go@v3
         with:
           go-version: '^1.17.0'
+
+      - name: install tfsec
         run: go install github.com/aquasecurity/tfsec/cmd/tfsec@latest
 
       - name: Setup python
